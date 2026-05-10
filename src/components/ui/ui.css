@@ -1,0 +1,67 @@
+/* ================================================================
+   UI Component CSS — only things Tailwind cannot handle
+   ================================================================ */
+
+/* Number input — hide browser spin buttons */
+.ui-input-no-spin::-webkit-outer-spin-button,
+.ui-input-no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ui-input-no-spin[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Modal panel entrance animation */
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ui-modal-panel {
+  animation: modal-panel-in 0.2s ease-out;
+}
+
+/* Alert entrance animation */
+@keyframes alert-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ui-alert {
+  animation: alert-in 0.2s ease-out;
+}
+
+/* Modal body thin scrollbar */
+.ui-modal-body {
+  scrollbar-width: thin;
+  scrollbar-color: #3e3e5e transparent;
+}
+
+.ui-modal-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ui-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ui-modal-body::-webkit-scrollbar-thumb {
+  background-color: #3e3e5e;
+  border-radius: 3px;
+}
