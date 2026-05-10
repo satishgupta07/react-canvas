@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "./components/ui/ui.css";
+
+/*
+ * Viewport lock — prevents a double scrollbar from appearing on the page.
+ * Sidebar and main content each get their own overflow-y-auto, so they
+ * scroll independently.  The parent (html/body/#root) must NOT scroll.
+ */
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/*
+ * Custom dark variant for Tailwind v4 (CSS-first config).
+ * `dark:` utilities activate when any ancestor element has the `dark` class.
+ * ThemeContext adds/removes that class on <html> via classList.toggle().
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Light theme (default) ---- */
+:root {
+  --rc-bg: #f1f5f9;
+  --rc-surface: #ffffff;
+  --rc-elevated: #f8fafc;
+  --rc-hover: #f0f4f8;
+  --rc-border: #e2e8f0;
+  --rc-border-hover: #94a3b8;
+  --rc-input-bg: #f8fafc;
+  --rc-text: #0f172a;
+  --rc-muted: #64748b;
+}
+
+/* ---- Dark theme ---- */
+.dark {
+  --rc-bg: #13131a;
+  --rc-surface: #1e1e2e;
+  --rc-elevated: #2a2a3e;
+  --rc-hover: #2e2e42;
+  --rc-border: #2e2e42;
+  --rc-border-hover: #4a4a62;
+  --rc-input-bg: #16171d;
+  --rc-text: #ffffff;
+  --rc-muted: #9ca3af;
+}
