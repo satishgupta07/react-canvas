@@ -41,8 +41,8 @@ export default function Counter() {
       : 'State updated in real-time'
 
   return (
-    <div className="flex-1 min-h-screen bg-[var(--rc-bg)] p-8 flex items-center justify-center">
-      <div className="w-full max-w-sm p-8 rounded-3xl bg-[var(--rc-surface)] border border-[var(--rc-border)] shadow-2xl text-center transition-all hover:border-purple-500/30">
+    <div className="flex-1 min-h-screen bg-[var(--rc-bg)] p-4 sm:p-8 flex items-center justify-center">
+      <div className="w-full max-w-sm p-6 sm:p-8 rounded-3xl bg-[var(--rc-surface)] border border-[var(--rc-border)] shadow-2xl text-center transition-all hover:border-purple-500/30">
 
         {/* Header */}
         <Typography variant="caption" className="uppercase tracking-[0.2em] font-bold block mb-2">

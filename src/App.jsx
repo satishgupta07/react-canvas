@@ -5,6 +5,7 @@ import AutoComplete from './modules/AutoComplete'
 import TabList from './modules/TabList'
 import TabForm from './modules/TabForm'
 import Sidebar from './components/Sidebar'
+import MobileNav from './components/MobileNav'
 
 /**
  * Central route registry — each entry drives both the sidebar nav link
@@ -29,11 +30,14 @@ const routes = [
  */
 export default function App() {
   return (
-    <div className="flex h-full bg-[var(--rc-bg)]">
-      {/* Fixed-width sidebar with its own independent scroll */}
+    <div className="flex flex-col md:flex-row h-full bg-[var(--rc-bg)]">
+      {/* Mobile-only top bar with Modules dropdown — hidden on md+ */}
+      <MobileNav routes={routes} />
+
+      {/* Desktop sidebar — hidden below md */}
       <Sidebar routes={routes} />
 
-      {/* Main content — grows to fill remaining width, scrolls independently */}
+      {/* Main content — grows to fill remaining space, scrolls independently */}
       <main className="flex-1 overflow-y-auto">
         <Routes>
           {routes.map(r => <Route key={r.path} path={r.path} element={r.element} />)}

@@ -143,7 +143,7 @@ export default function AutoComplete({ debounceInput = false, isLoading, onChang
   ) : null
 
   return (
-    <div className="min-h-screen bg-[var(--rc-bg)] flex items-start justify-center p-8">
+    <div className="min-h-screen bg-[var(--rc-bg)] flex items-start justify-center p-4 sm:p-8">
       <div className="w-full max-w-md">
         <Typography variant="h3" className="mb-1">AutoComplete</Typography>
         <Typography variant="muted" className="mb-6">

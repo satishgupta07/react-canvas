@@ -45,7 +45,7 @@ function OverviewPanel() {
       <Typography variant="muted">
         Welcome to the overview. Here you can see a summary of your account status and recent highlights.
       </Typography>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
           { label: 'Total Items', value: '1,284', variant: 'success' },
           { label: 'In Progress', value: '42', variant: 'warning' },
@@ -149,13 +149,13 @@ export default function TabList() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--rc-bg)] p-8">
+    <div className="min-h-screen bg-[var(--rc-bg)] p-4 sm:p-8">
       <Typography variant="h3" className="mb-6">Tab List</Typography>
 
       <div
         role="tablist"
         aria-label="Main navigation"
-        className="flex border-b border-[var(--rc-border)]"
+        className="flex border-b border-[var(--rc-border)] overflow-x-auto"
       >
         {tabs.map(tab => (
           <button
@@ -169,7 +169,7 @@ export default function TabList() {
             onClick={() => setActiveId(tab.id)}
             onKeyDown={handleKeyDown}
             className={[
-              'flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors',
+              'flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors shrink-0 whitespace-nowrap',
               activeId === tab.id
                 ? 'text-purple-400 border-purple-500'
                 : 'text-[var(--rc-muted)] border-transparent hover:text-[var(--rc-text)]',

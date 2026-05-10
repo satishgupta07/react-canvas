@@ -105,7 +105,7 @@ export default function TabForm() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-[var(--rc-bg)] p-8">
+      <div className="min-h-screen bg-[var(--rc-bg)] p-4 sm:p-8">
         <Typography variant="h3" className="mb-6">Tab Form</Typography>
         <div className="max-w-sm flex flex-col gap-4">
           <Alert variant="success" title="Submitted successfully!">
@@ -161,7 +161,7 @@ export default function TabForm() {
     <div className="min-h-screen bg-[var(--rc-bg)] p-8">
       <Typography variant="h3" className="mb-6">Tab Form</Typography>
 
-      <div role="tablist" className="flex border-b border-[var(--rc-border)] mb-6">
+      <div role="tablist" className="flex border-b border-[var(--rc-border)] mb-6 overflow-x-auto">
         {tabs.map((tab, i) => (
           <TabButton
             key={tab.id}

@@ -44,7 +44,7 @@ const Sidebar = ({ routes }) => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <aside className="w-60 h-full flex flex-col shrink-0 overflow-y-auto bg-[var(--rc-surface)] border-r border-[var(--rc-border)] shadow-xl">
+    <aside className="hidden md:flex w-60 h-full flex-col shrink-0 overflow-y-auto bg-[var(--rc-surface)] border-r border-[var(--rc-border)] shadow-xl">
 
       {/* Logo */}
       <div className="px-5 py-6 text-sm font-bold text-purple-400 tracking-wider uppercase border-b border-[var(--rc-border)]">

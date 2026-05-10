@@ -25,7 +25,7 @@ export default function TabButton({ label, step, isActive, isCompleted, onClick 
       aria-selected={isActive}
       onClick={onClick}
       className={[
-        'flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors',
+        'flex items-center gap-2 px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors shrink-0 whitespace-nowrap',
         isActive
           ? 'text-purple-400 border-purple-500'
           : isCompleted
